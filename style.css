@@ -220,9 +220,54 @@ nav ul li a:hover::after{
 
 .ECA-item div:hover{
 	background: #6482AD;
-	transform : translateY(-10px);
+	transform : translateY(-20px);
 }
 
-#portfolio{
+#works{
 	padding: 50px 0;
+}
+
+.work-list{
+	display:grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap:50px;
+	margin-top:50px;
+}
+
+.work{
+	border-radius:20px;
+	position:relative;
+	overflow:hidden;
+}
+
+.work img{
+	width:100%;
+	border-radius:30px;
+	display:block;
+}
+
+.work p{
+	font-size:20px;
+}
+
+.layer{
+	width:100%;
+	height:100%;
+	background:linear-gradient(rgba(0,0,0,0.6),#ff004f);
+	border-radius:10px;
+	position:absolute;
+	left:0;
+	bottom:0;
+	overflow:hidden;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction:column;
+	padding:0 40px;
+	text-align:center;
+}
+
+.layer h1{
+	font-weight:700;
+	margin-bottom:30px;
 }
