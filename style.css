@@ -187,8 +187,9 @@ nav ul li a:hover::after{
 	margin-top: 50px;
 }
 
+
 .ECA-item div{
-	background: #4C585B;
+	background: #9BA4B4;
 	padding: 40px;
 	font-size: 35px;
 	font-weight: 300;
@@ -198,30 +199,37 @@ nav ul li a:hover::after{
 
 .ECA-item div h1{
 	margin-bottom: 35px;
-	color:#fff;
+	color:#F9FBE7;
 }
 
 .ECA-item div p{
 	margin: 20px 0;
-	color: #fff;
+	color: #F9FBE7;
 }
 
-.ECA-item div a{
-	text-decoration: none;
-	color: #fff;
-	font-size: 20px;
-	margin-top: 20px;
-    display: inline-block;/*need to see again*/
+.item a{
+	margin-top:80px;
+	text-decoration:none;
+	color:#fff;
+	border-radius:50%;
+	width:60px;
+	height:60px;
+	line-height:60px;
+	font-size:60px;
 }
+
 
 .ECA-item div a:hover {
-	color:#F4E0AF;
+	color:#E3E7B3;
 }
+
 
 .ECA-item div:hover{
 	background: #6482AD;
 	transform : translateY(-20px);
 }
+
+/*-------------portfolio----------------*/
 
 #works{
 	padding: 50px 0;
@@ -244,15 +252,16 @@ nav ul li a:hover::after{
 	width:100%;
 	border-radius:30px;
 	display:block;
+	transition:transform 0.5s;
 }
 
 .work p{
-	font-size:20px;
+	font-size:40px;
 }
 
 .layer{
 	width:100%;
-	height:100%;
+	height:0%;
 	background:linear-gradient(rgba(0,0,0,0.6),#ff004f);
 	border-radius:10px;
 	position:absolute;
@@ -265,9 +274,49 @@ nav ul li a:hover::after{
 	flex-direction:column;
 	padding:0 40px;
 	text-align:center;
+	transition:height 0.5s;
 }
 
 .layer h1{
 	font-weight:700;
-	margin-bottom:30px;
+	font-size:50px;
+	margin-bottom:50px;
+}
+
+.layer a{
+	margin-top:80px;
+	color:#E82561;
+	text-decoration:none;
+	font-size:50px;
+	line-height:80px;
+	background:#FFFDF0;
+	width:80px;
+	height:80px;
+	border-radius:50%;
+
+}
+
+.work:hover img{
+	transform: scale(1.2);
+}
+
+.work:hover .layer{
+	height:100%;
+}
+
+.btn{
+	display:block;
+	margin:50px auto;
+	width:fit-content;
+	border: 1px solid #ff004f;
+	padding: 34px 70px;
+	border-radius:40px;
+	text-decoration:none;
+	color:#fff;
+	font-size:40px;
+	transition:transform 0.5s;
+}
+
+.btn:hover{
+	background:#ff004f;
 }
