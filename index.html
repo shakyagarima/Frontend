@@ -13,14 +13,14 @@
 			<nav>
 				<h1 id="logo">GARIMA.</h1>
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">ECA</a></li>
-					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">Contact Me</a></li>
-					<i class="fa-solid fa-circle-xmark"></i>
+					<li><a href="#header">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#eca">ECA</a></li>
+					<li><a href="#works">Portfolio</a></li>
+					<li><a href="#contact">Contact Me</a></li>
+					<!-- <i class="fa-solid fa-circle-xmark"></i> -->
 				</ul>
-				<i class="fa-solid fa-bars"></i>
+				<!-- <i class="fa-solid fa-bars"></i> -->
 			</nav>
 			<div class="header-text">
 				<p>Student | Learner | Curious</p><br><br><br>
@@ -196,12 +196,13 @@
 				</div>
 			</div>
 			<div class="contact-right">
-				<form>
+				<form name="submit-to-google-sheet">
 					<input type="text" name="Name" placeholder="Your Name" required>
 					<input type="email" name="Email" placeholder="Email" required>
-					<textarea name="message" rows="6" placeholder="Your Message"></textarea>
+					<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
 					<button type="submit" class="btn btn2">Submit</button>
 				</form>
+				<span id="msg"></span>
 			</div>
 
 		</div>
@@ -230,6 +231,28 @@
 
 	}
 </script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzRIpJsx0PPDmYJGgmILk6cZT9vk_ylwORJqE8g-axYToqRFjB8gRJdHBvMut93AWPGeA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+  
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+      	msg.innerHTML="Message submitted successfully!"
+      	setTimeout(function(){
+      		msg.innerHTML=""
+      	},5000)
+      	form.reset()
+
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
 </body>
 </html>
 

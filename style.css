@@ -5,6 +5,10 @@
 	box-sizing:border-box;
 }
 
+html{
+	scroll-behavior:smooth;
+}
+
 body{
 	background:#1A120B ;
 	color:#D0DDD0;
@@ -386,18 +390,12 @@ form .btn2{
 	cursor:pointer;
 }
 
+#msg{
+	color:#fff;
+	margin-top:-25px;
+	display:block;
+	font-size:50px;
+}
 /*-------css for smaller screens----------------*/
 
-nav .fa-solid{
-	display: none;
-}
-
-/*@media only screen and (max-width:600px)
-{
-	nav .fa-solid{
-		display:block;
-		font-size:90px;
-	}
-
-
-}*/
+/*remaining to do*/
